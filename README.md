@@ -1,4 +1,4 @@
-# Higher-or-Lower
+# Game.py
 ## Python based command line maths game
 
 
