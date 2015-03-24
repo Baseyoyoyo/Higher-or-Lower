@@ -14,6 +14,10 @@ of the players score. If the guess was incorrect then the game will end and thei
 appear on the screen. On each level that they get correct the numbers will increase making 
 the range larger and the chance of guessing incorrectly larger as well.
 
+### Whats New?
+
+High Score table added into code called `scores.db`. The database stores player name, Their score and the date and time they achieved the score.
+
 ### How To Run
 
 Type into console `python higher_or_lower.py` and hit enter
