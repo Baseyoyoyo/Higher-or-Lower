@@ -10,13 +10,17 @@ asks the user to input either l or h to symbolise weather the next randomly prod
 number will be either higher or lower than the previously number. The computer will 
 then reveal the second number and tell the user if their guess was correct or incorrect.
 if the guess was correct then the computer will move onto the next stage keeping track
-of the players score. If the guess was incorrect then the game will end and their score will
-appear on the screen. On each level that they get correct the numbers will increase making 
+of the players score. If the guess was incorrect then the their score will decrease by 1 point. On each level that they get correct the numbers will increase making 
 the range larger and the chance of guessing incorrectly larger as well.
+The score is now displayed on the screen after every turn taken so you can keep track of your score.
 
 ### Whats New?
 
 High Score table added into code called `scores.db`. The database stores player name, Their score and the date and time they achieved the score.
+
+The score is now displayed on the screen after every turn taken so you can keep track of your score.
+
+If the guess was incorrect then the their score will decrease by 1 point rather than ending the game all together.
 
 ### How To Run
 
