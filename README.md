@@ -16,5 +16,5 @@ the range larger and the chance of guessing incorrectly larger as well.
 
 ### How To Run
 
-Type into console python `higher_or_lower.py` and hit enter
+Type into console `python higher_or_lower.py` and hit enter
 the program should now automatically run.
