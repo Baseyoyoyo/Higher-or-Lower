@@ -1,10 +1,18 @@
 # Simple CLI based game for guessing a number being higher or lower
 # Requires Python > 3
 # `python higher_or_lower.py`
+import sqlite3
 
 import random
 
-print ("Test")
+db = sqlite3.connect("scores.db")
+
+cursor = db.cursor()
+
+cursor.execute('''
+  CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY, name TEXT, score INTEGER)
+''')
+
 
 print ("Hello and welcome to my higher or lower number guessing game.")
 
@@ -17,7 +25,7 @@ count = 1
 previousNumber = random.randrange(1, count*20)
 
 
-while 1:
+while count <= 15:
  
   print ("\nKeep in mind that the numbers range from 1 to " + str(count * 20))
 
@@ -45,3 +53,10 @@ while 1:
   
 
 print ("Well done your score is " + str(score) + " Good Job")
+
+cursor.execute('''INSERT INTO scores(name, score)
+  VALUES(?,?)''', (myName, score))
+
+db.commit()
+
+db.close()
