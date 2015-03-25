@@ -2,8 +2,8 @@
 # Requires Python > 3
 # `python higher_or_lower.py`
 import random
-from lib.score_board import ScoreBoard
-from lib.player_score import PlayerScore
+from classes.score_board import ScoreBoard
+from classes.player_score import PlayerScore
 
 score_board = ScoreBoard()
 
