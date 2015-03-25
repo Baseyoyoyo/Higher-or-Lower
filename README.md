@@ -18,6 +18,8 @@ The score is now displayed on the screen after every turn taken so you can keep 
 
 High Score table added into code called `scores.db`. The database stores player name, Their score and the date and time they achieved the score.
 
+The scores now descend from the largest amount of points downwards to smallest amount of points.
+
 The score is now displayed on the screen after every turn taken so you can keep track of your score.
 
 If the guess was incorrect then the their score will decrease by 1 point rather than ending the game all together.
