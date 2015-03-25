@@ -13,14 +13,11 @@ if the guess was correct then the computer will move onto the next stage keeping
 of the players score. If the guess was incorrect then the their score will decrease by 1 point. On each level that they get correct the numbers will increase making 
 the range larger and the chance of guessing incorrectly larger as well.
 The score is now displayed on the screen after every turn taken so you can keep track of your score.
+At the end of the game you can view previous players scores and compare them to your score.
 
 ### Whats New?
 
-The user can now choose to view the recent scores or the top high scores by just opening `scores.py`
-
-The scores now descend from the largest amount of points downwards to smallest amount of points.
-
-If the guess was incorrect then the their score will decrease by 1 point rather than ending the game all together.
+The `scores.py` file now automatically runs so at the end of the game it asks the user if they would like to view the High Scores.
 
 ### How To Run
 
