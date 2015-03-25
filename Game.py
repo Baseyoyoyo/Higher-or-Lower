@@ -9,9 +9,7 @@ db = sqlite3.connect("scores.db")
 
 cursor = db.cursor()
 
-cursor.execute("""
-  CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY, name TEXT, score INTEGER, recorded_at DATETIME)
-"""         )
+cursor.execute("CREATE TABLE IF NOT EXISTS scores(id INTEGER PRIMARY KEY, name TEXT, score INTEGER, recorded_at DATETIME)")
 
 
 print ("Hello and welcome to my higher or lower number guessing game.")
@@ -56,8 +54,12 @@ while count <= 15:
 
 print ("Well done your score is " + str(score) + " Good Job")
 
-cursor.execute("""INSERT INTO scores(name, score, recorded_at)
-  VALUES(?,?,?)""", (myName, score, recorded_at))
+cursor.execute(
+  "INSERT INTO scores(name, score, recorded_at) VALUES(?,?,?)", 
+  (myName, score, recorded_at)
+xss)
+
+execfile("scores.py")
 
 db.commit()
 
