@@ -5,7 +5,7 @@ db = sqlite3.connect("scores.db")
 cursor = db.cursor()
 
 scores = cursor.execute("""
-  select name, score, recorded_at from scores;
+  select name, score, recorded_at from scores order by score desc;
 """).fetchall()
 
 for score in scores:
