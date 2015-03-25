@@ -57,9 +57,10 @@ print ("Well done your score is " + str(score) + " Good Job")
 cursor.execute(
   "INSERT INTO scores(name, score, recorded_at) VALUES(?,?,?)", 
   (myName, score, recorded_at)
-xss)
+)
 
 execfile("scores.py")
+
 
 db.commit()
 
