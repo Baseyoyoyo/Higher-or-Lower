@@ -21,6 +21,3 @@ class ScoreBoard(object):
     )
 
     self.db.commit()
-
-score = ScoreBoard()
-score.add("Harvey", 3)

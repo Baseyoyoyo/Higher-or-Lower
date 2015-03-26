@@ -1,41 +1,18 @@
 # Simple CLI based game for guessing a number being higher or lower
 # Requires Python > 3
 # `python higher_or_lower.py`
-import random
 from classes.score_board import ScoreBoard
 from classes.player_score import PlayerScore
 from classes.levels import Levels
+from classes.game_controller import GameController
 
 score_board = ScoreBoard()
-
-print ("Hello and welcome to my higher or lower number guessing game.")
-
-name = raw_input("Whats your name? ")
-
-print ("So, your names " + name + " Hmmmmmmm")
-
 score = PlayerScore()
-
 levels = Levels(15)
 
-for number in levels:
- 
-  print ("\nKeep in mind that the numbers range from 1 to " + str(levels.counter * 20))
+game = GameController(score_board, score, levels)
 
-  print ("\n\nYour number is " + str(levels.previousAnswer()) + ". So will the next number be higher or lower?")
-
-  guess = raw_input("\n\nEnter either h or l: ")
-
-  if (levels.validateAnswer(guess)):
-    score.increment()
-
-    print ("Well done the number was " + str(number) + " Your score at the end of the round is " + str(score))
-
-  else:
-
-    score.decrement()
-
-    print ("Incorrect the number was " + str(number) + " Your score at the end of the round is " + str(score))
-
-score_board.add(name, score.value)
-print ("Well done your score is " + str(score) + " Good Job")
+game.welcomeMessage()
+game.getName()
+game.runLevels()
+game.complete()
