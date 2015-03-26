@@ -1,6 +1,6 @@
 class PlayerScore(object):
-  def __init__(self):
-    self.value = 0
+  def __init__(self, value = 0):
+    self.value = value
 
   def increment(self):
     self.value = self.value + 1

@@ -4,6 +4,7 @@
 import random
 from classes.score_board import ScoreBoard
 from classes.player_score import PlayerScore
+from classes.levels import Levels
 
 score_board = ScoreBoard()
 
@@ -17,14 +18,13 @@ score = PlayerScore()
 count = 1
 previousNumber = random.randrange(1, count*20)
 
+levels = Levels(15)
 
-while count <= 15:
+for number in levels:
  
   print ("\nKeep in mind that the numbers range from 1 to " + str(count * 20))
 
   print ("\n\nYour number is " + str(previousNumber) + ". So will the next number be higher or lower?")
-
-  number = random.randrange(1, count*20)
 
   guess = raw_input("\n\nEnter either h or l: ")
 
