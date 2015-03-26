@@ -41,7 +41,10 @@ class Levels(object):
     return numbers
   
   def validateAnswer(self, answer):
-    return (self.previousAnswer() > self.currentAnswer() and answer == "l") or (self.currentAnswer() > self.previousAnswer() and answer == "h")
+    current_answer = self.currentAnswer()["value"]
+    previous_answer = self.previousAnswer()["value"]
+
+    return (previous_answer > current_answer and answer == "l") or (current_answer > previous_answer and answer == "h")
 
   def currentAnswer(self):
     return self.values[self.counter]
