@@ -23,3 +23,9 @@ The `scores.py` file now automatically runs so at the end of the game it asks th
 
 Type into console `python higher_or_lower.py` and hit enter
 the program should now automatically run.
+
+### Tests
+
+The core classes that form the game are tested with Python's unittest. Tests can be found in the [tests directory](tests/).
+
+To easily run the tests, I've included a bash script. From the root of the project, use `./test` and the all tests will be run.

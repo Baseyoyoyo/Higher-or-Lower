@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Runs python unittests for the tests in the `tests/` directory
+# Usage: `./test`
+python -m unittest discover -s tests/ -p *_test.py
