@@ -6,8 +6,7 @@ class PlayerScore(object):
     self.value = self.value + 1
 
   def decrement(self):
-    if self.value > 0:
-      self.value = self.value - 1
+    self.value = self.value - 1 if self.value > 0 else 0
 
   def __index__(self):
     return self.value
