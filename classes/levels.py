@@ -10,23 +10,29 @@ class Levels(object):
     return self
 
   def next(self):
-    if self.counter >= self.quantity:
+    if self.counter + 1 == self.quantity:
       raise StopIteration
-      
-    answer = self.values[self.counter]
 
     self.counter = self.counter + 1
 
-    return answer
+    return self.currentAnswer()
 
   def generateAnswers(self):
     count = 1
     answers = []
 
     while count <= self.quantity:
-      answers.append(random.randrange(1, count*20))
+      answers.append(random.randrange(1, count * 20))
 
       count = count + 1
 
     return answers
+  
+  def validateAnswer(self, answer):
+    return (self.previousAnswer() > self.currentAnswer() and answer == "l") or (self.currentAnswer() > self.previousAnswer() and answer == "h")
 
+  def currentAnswer(self):
+    return self.values[self.counter]
+
+  def previousAnswer(self):
+    return self.values[self.counter - 1]
