@@ -17,16 +17,28 @@ class Levels(object):
 
     return self.currentAnswer()
 
+  def rangeFor(self, index):
+    return [1, index * 20]
+
+  def generateNumber(self, count):
+    range = self.rangeFor(count)
+
+    return {
+      "floor": range[0],
+      "ceiling": range[1],
+      "value": random.randrange(range[0], range[1], count)
+    }
+
   def generateAnswers(self):
     count = 1
-    answers = []
+    numbers = []
 
     while count <= self.quantity:
-      answers.append(random.randrange(1, count * 20))
+      numbers.append(self.generateNumber(count))
 
       count = count + 1
 
-    return answers
+    return numbers
   
   def validateAnswer(self, answer):
     return (self.previousAnswer() > self.currentAnswer() and answer == "l") or (self.currentAnswer() > self.previousAnswer() and answer == "h")

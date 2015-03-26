@@ -21,7 +21,7 @@ The `scores.py` file now automatically runs so at the end of the game it asks th
 
 ### How To Run
 
-Type into console `python higher_or_lower.py` and hit enter
+Type into console `python -m game.py` and hit enter
 the program should now automatically run.
 
 ### Tests
