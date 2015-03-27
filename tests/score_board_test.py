@@ -10,7 +10,7 @@ class ScoreBoardTest(unittest.TestCase):
   def __init__(self, *args, **kwargs):
     super(ScoreBoardTest, self).__init__(*args, **kwargs)
     
-    self.score_board = ScoreBoard("testdatabase.py")
+    self.score_board = ScoreBoard("testdatabase.db")
 
   def seedScores(self):
     self.score_board.clear()
