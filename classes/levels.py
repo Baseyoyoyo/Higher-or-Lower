@@ -10,7 +10,7 @@ class Levels(object):
     return self
 
   def next(self):
-    if self.counter + 1 == self.quantity:
+    if self.counter == self.quantity:
       raise StopIteration
 
     self.counter = self.counter + 1
@@ -18,6 +18,7 @@ class Levels(object):
     return self.currentAnswer()
 
   def rangeFor(self, index):
+    index = 1 if index == 0 else index
     return [1, index * 20]
 
   def generateNumber(self, count):
@@ -26,14 +27,14 @@ class Levels(object):
     return {
       "floor": range[0],
       "ceiling": range[1],
-      "value": random.randrange(range[0], range[1], count)
+      "value": random.randrange(range[0], range[1])
     }
 
   def generateAnswers(self):
-    count = 1
+    count = 0
     numbers = []
 
-    while count <= self.quantity:
+    while count <= self.quantity - 1:
       numbers.append(self.generateNumber(count))
 
       count = count + 1

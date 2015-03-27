@@ -7,7 +7,7 @@ class GameController(object):
     self.levels = levels
 
   def output(self, value):
-    print value
+    print value + "\n\n"
 
   def welcomeMessage(self):
     self.output("Hello and welcome to my higher or lower number guessing game.")
@@ -26,3 +26,9 @@ class GameController(object):
   def complete(self):
     self.score_board.add(self.name, self.score.value)
     self.output("Well done your score is " + str(self.score) + " Good Job")
+
+  def leaders(self):
+    self.output("These are the current high scores")
+
+    for score in self.score_board.highest(10):
+      print "player " + score[0] + " achieved a score of " + str(score[1]) + " at " + str(score[2])
