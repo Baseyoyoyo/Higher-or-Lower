@@ -17,15 +17,18 @@ At the end of the game you can view previous players scores and compare them to 
 
 ### Whats New?
 
-The `scores.py` file now automatically runs so at the end of the game it asks the user if they would like to view the High Scores.
+All of the main code has been put into classes which can be viewed in the [classes directory](classes/)
 
 ### How To Run
 
-Type into console `python -m game.py` and hit enter
-the program should now automatically run.
+First make sure you are in the game folders directory. Then type into the console `python game.py` and hit enter the program should now automatically run.
 
 ### Tests
 
 The core classes that form the game are tested with Python's unittest. Tests can be found in the [tests directory](tests/).
 
 To easily run the tests, I've included a bash script. From the root of the project, use `./test` and the all tests will be run.
+
+### Thanks
+
+A big thanks to Chris Garrett for helping me to develop a further understanding of python and teaching me ways to improve the code in multiple different ways such as abstraction and adding classes. This complete project would not have been possible without him. 
